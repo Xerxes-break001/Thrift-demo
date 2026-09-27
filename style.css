@@ -20,21 +20,17 @@ a {
     color: inherit;
 }
 
-
-/* NAV */
+/* NAVBAR */
 
 .navbar {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-
     padding: 25px 5%;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     z-index: 20;
 }
 
@@ -43,7 +39,6 @@ a {
     font-family: "Space Grotesk", sans-serif;
     font-size: 25px;
     font-weight: 700;
-    letter-spacing: -1px;
 }
 
 .logo span,
@@ -82,12 +77,9 @@ a {
 
 .hero {
     min-height: 100vh;
-
     display: grid;
-    grid-template-columns: 45% 55%;
-
+    grid-template-columns: 1fr 1fr;
     position: relative;
-
     background: #171717;
 }
 
@@ -100,15 +92,13 @@ a {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: saturate(.85);
 }
 
 .hero-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-    padding: 100px 8%;
+    padding: 120px 10%;
 }
 
 .eyebrow {
@@ -121,8 +111,8 @@ a {
 
 .hero h1 {
     font-family: "Space Grotesk", sans-serif;
-    font-size: clamp(55px, 7vw, 105px);
-    line-height: .86;
+    font-size: clamp(55px, 6vw, 95px);
+    line-height: .88;
     letter-spacing: -5px;
 }
 
@@ -178,7 +168,7 @@ a {
 }
 
 
-/* DROP */
+/* LATEST DROP */
 
 .drop {
     padding: 120px 6%;
@@ -215,16 +205,22 @@ a {
 }
 
 
-/* PRODUCTS */
+/* PRODUCT GRID */
 
 .product-grid {
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 35px 22px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 50px 25px;
+}
+
+.product {
+    min-width: 0;
 }
 
 .product-image {
-    height: 480px;
+    width: 100%;
+    height: 500px;
     position: relative;
     overflow: hidden;
     background: #ddd;
@@ -233,7 +229,9 @@ a {
 .product-image img {
     width: 100%;
     height: 100%;
+    display: block;
     object-fit: cover;
+    object-position: center;
     transition: transform .5s;
 }
 
@@ -245,12 +243,9 @@ a {
     position: absolute;
     top: 15px;
     left: 15px;
-
     background: #d9ff3f;
     color: #111;
-
     padding: 8px 11px;
-
     font-size: 9px;
     font-weight: 700;
 }
@@ -275,6 +270,7 @@ a {
 
 .product-info strong {
     font-size: 14px;
+    white-space: nowrap;
 }
 
 .product > small {
@@ -288,7 +284,6 @@ a {
 
 .pieces {
     padding: 130px 7%;
-
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 100px;
@@ -301,16 +296,11 @@ a {
 .category-list a {
     display: grid;
     grid-template-columns: 50px 1fr 30px;
-
     align-items: center;
-
     padding: 25px 0;
-
     border-bottom: 1px solid #333;
-
     font-family: "Space Grotesk", sans-serif;
     font-size: 24px;
-
     transition: .3s;
 }
 
@@ -333,20 +323,21 @@ a {
 
 .lookbook {
     display: grid;
-    grid-template-columns: 55% 45%;
+    grid-template-columns: 1fr 1fr;
     min-height: 750px;
-
     background: #d9ff3f;
     color: #111;
 }
 
 .lookbook-image {
+    height: 750px;
     overflow: hidden;
 }
 
 .lookbook-image img {
     width: 100%;
     height: 100%;
+    display: block;
     object-fit: cover;
 }
 
@@ -354,8 +345,7 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-    padding: 80px 10%;
+    padding: 80px 12%;
 }
 
 .lookbook-content .eyebrow {
@@ -387,10 +377,8 @@ a {
 
 .why-grid {
     margin-top: 80px;
-
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-
     border-top: 1px solid #333;
 }
 
@@ -440,10 +428,8 @@ a {
 .contact-info {
     max-width: 850px;
     margin: 60px auto 45px;
-
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-
     border-top: 1px solid #333;
     border-bottom: 1px solid #333;
 }
@@ -573,5 +559,4 @@ footer small {
     .contact-info div:last-child {
         border-bottom: none;
     }
-
 }
